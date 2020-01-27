@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			rel="shortcut icon"
+			href="assets/images/favicon.ico"
+			type="image/x-icon"
+		/>
+		<title>Whatsapp Link</title>
+		<link rel="stylesheet" href="assets/css/index.css" />
+		<script src="assets/js/vue.js"></script>
+	</head>
+	<body>
+		<header>
+			<a href="/" class="logo">Whatsapp Link</a>
+		</header>
+
+		<div class="container">
+			<p>Número do celular</p>
+			<input
+				type="text"
+				placeholder="(99) 9 9999-9999"
+				v-model="numero"
+			/>
+
+			<p>Mensagem</p>
+			<input
+				type="text"
+				placeholder="Digite sua mensagem."
+				v-model="mensagem"
+			/>
+			<button @click.stop.prevent="get_link">
+				Ir para o link gerado.
+			</button>
+		</div>
+
+		<script src="assets/js/index.js"></script>
+	</body>
+</html>
